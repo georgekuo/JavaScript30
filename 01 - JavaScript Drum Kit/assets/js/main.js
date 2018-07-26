@@ -6,3 +6,6 @@ window.addEventListener('keydown', function(e){
     audio.play();
     key.classList.add('playing');
 })
+
+const keys = document.querySelectorAll('.key'); //取得 keys 的 node list
+keys.forEach(key => key.addEventListener("transitionend", removeTransition)); //讓 keys 裡每個 div 動畫結束後，馬上移除動畫
