@@ -7,5 +7,11 @@ window.addEventListener('keydown', function(e){
     key.classList.add('playing');
 })
 
+function removeTransition(e) { 
+  //console.log(e) //TransitionEvent
+  if (e.propertyName !== 'transform') return;
+  //console.log(this) //this 是 keys 裡的 div
+  this.classList.remove('playing') //移除 class 'playing'
+}
 const keys = document.querySelectorAll('.key'); //取得 keys 的 node list
 keys.forEach(key => key.addEventListener("transitionend", removeTransition)); //讓 keys 裡每個 div 動畫結束後，馬上移除動畫
