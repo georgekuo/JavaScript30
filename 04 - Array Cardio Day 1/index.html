@@ -31,30 +31,41 @@
 
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-    const bornIn1500 = inventors.filter((inventor) => inventor.year >= 1500 && inventor.year < 1600 )
-    console.log(bornIn1500)
-    console.log('---------')
+    // const bornIn1500 = inventors.filter((inventor) => inventor.year >= 1500 && inventor.year < 1600 )
+    // console.log('01',bornIn1500)
+    const fifteen = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year <1600))
+    console.table(fifteen)
+    console.log('----------------------------------------------------------------')
+
     // Array.prototype.map()
     // 2. Give us an array of the inventors' first and last names
-    const allInventor = inventors.map((inventor)=> `${inventor.first} ${inventor.last}` )
-    console.log(allInventor)
-    console.log('---------')
+    const allInventor = inventors.map((inventor) => `${inventor.first} ${inventor.last}`  )
+    console.log('allInventor',allInventor)
+    console.log('----------------------------------------------------------------')
+
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
-    const ageSort = inventors.sort((a,b)=> a.year - b.year )
-    console.log(ageSort)
-    console.log('---------')
+    const ordered = inventors.sort((a, b) => a.year > b.year ? 1 : -1)
+    console.log('ordered',ordered)
+    console.log('----------------------------------------------------------------')
+
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live?
-    // const everyOneYears = inventors.map((inventor)=> inventor.passed - inventor.year )
     const totalYears = inventors.reduce((total,inventor)=>{
       return total + (inventor.passed - inventor.year)
     }, 0)
     console.log('totalYears', totalYears)
-    console.log('---------')
+    console.log('----------------------------------------------------------------')
 
     // 5. Sort the inventors by years lived
-    const younger = inventors.sort((a, b)=> (b.passed - b.year) - (a.passed - a.year) )
+    
+    // Wes Bos 的解法
+    // const younger = inventors.sort((a,b) => {
+    //   const lastGuy = a.passed - a.year
+    //   const nextGuy = b.passed - b.year
+    //   return lastGuy < nextGuy ? 1 : -1
+    // })
+    const younger = inventors.sort((a, b) => (b.passed - b.year) - (a.passed - a.year) )
     console.table(younger)
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
