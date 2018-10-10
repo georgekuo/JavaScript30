@@ -58,7 +58,7 @@
     console.log('----------------------------------------------------------------')
 
     // 5. Sort the inventors by years lived
-    
+
     // Wes Bos 的解法
     // const younger = inventors.sort((a,b) => {
     //   const lastGuy = a.passed - a.year
@@ -70,15 +70,20 @@
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-    const category = document.querySelector('.mw-category')
-    const links = Array.from(category.querySelectorAll('a'))
-    const de = links
-                .map(link => link.textContent)
-                .filter(streetName => streetName.includes('de'))
+
+    // const category = document.querySelector('.mw-category')
+    // const links = Array.from(category.querySelectorAll('a'))
+    // const de = links
+    //             .map(link => link.textContent)
+    //             .filter(streetName => streetName.includes('de'))
 
 
     // 7. sort Exercise
     // Sort the people alphabetically by last name
+    const sortName = inventors.sort(function (inventor) {
+      inventor.last - inventor.last
+    })
+    console.log(sortName)
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
