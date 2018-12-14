@@ -64,14 +64,17 @@
 
     // 5. Sort the inventors by years lived
     console.log('No.5 answer ----------------------------------------------------')
-    // Wes Bos 的解法
-    // const younger = inventors.sort((a,b) => {
-    //   const lastGuy = a.passed - a.year
-    //   const nextGuy = b.passed - b.year
-    //   return lastGuy < nextGuy ? 1 : -1
-    // })
-    const younger = inventors.sort((a, b) => (b.passed - b.year) - (a.passed - a.year) )
-    console.table(younger)
+    //Wes Bos 的解法
+    const oldest = inventors.sort((a,b) => {
+      const lastGuy = a.passed - a.year;
+      const nextGuy = b.passed - b.year;
+      return lastGuy < nextGuy ? 1 : -1;
+    })
+    console.log(oldest)
+
+    //我的解法
+    // const oldest = inventors.sort((a, b) => (b.passed - b.year) - (a.passed - a.year))
+    // console.table(oldest)
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
