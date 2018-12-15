@@ -90,17 +90,19 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
     console.log('No.7 answer ----------------------------------------------------')
-    const alpha = people.sort((lastOne, nextOne) => {
-      const [aLast, aFirst] = lastOne.split(', ');
-      const [bLast, bFirst] = nextOne.split(', ');
-      return aLast > bLast ? 1 : -1;
-    })
-    console.log(alpha);
-
-    // const sortName = inventors.sort(function (inventor) {
-    //   inventor.last - inventor.last
+    //Wes Bos 的解法
+    // const alpha = people.sort((lastOne, nextOne) => {
+    //   const [aLast, aFirst] = lastOne.split(', ');
+    //   const [bLast, bFirst] = nextOne.split(', ');
+    //   return aLast > bLast ? 1 : -1;
     // })
-    // console.log(sortName)
+    // console.log(alpha);
+
+    //我的解法
+    const sortName = people.sort(function (man) {
+      man.last - man.last
+    })
+    console.log(sortName)
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
