@@ -108,6 +108,14 @@
         obj[item] = 0;  
       }
       obj[item]++;
+
+      /* ---second solution---
+      ** if (item in obj) {
+      ** obj[item]++;
+      ** } else {
+      ** obj[item] = 1;
+      ** }
+      */
       return obj;
     },{})
     console.log('transportation', transportation)
