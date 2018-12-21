@@ -5,35 +5,35 @@
   <meta charset="UTF-8">
   <title>Scoped CSS Variables and JS</title>
   <style>
-  :root {
-    --base: #ffc600;
-    --spacing: 10px;
-    --blur: 10px;
-  }
-  img {
-    padding: var(--spacing);
-    background: var(--base);
-    filter: blur(var(--blur));
-  }
-  body {
-    text-align: center;
-    background: #193549;
-    color: white;
-    font-family: 'helvetica neue', sans-serif;
-    font-weight: 100;
-    font-size: 50px;
-  }
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+    }
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+    body {
+      text-align: center;
+      background: #193549;
+      color: white;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 50px;
+    }
 
-  .controls {
-    margin-bottom: 50px;
-  }
+    .controls {
+      margin-bottom: 50px;
+    }
 
-  input {
-    width: 100px;
-  }
-  .hl {
-    color: var(--base);
-  }
+    input {
+      width: 100px;
+    }
+    .hl {
+      color: var(--base);
+    }
   </style>
 </head>
 
