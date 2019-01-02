@@ -32,7 +32,6 @@
       box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
       color:white;
       text-align: center;
-      align-items:center;
       /* Safari transitionend event.propertyName === flex */
       /* Chrome + FF transitionend event.propertyName === flex-grow */
       transition:
@@ -121,12 +120,12 @@
     const panels = document.querySelectorAll('.panel');
 
     function toggleOpen() {
-      console.log('Hello');
+      // console.log('Hello');
       this.classList.toggle('open');
     }
 
     function toggleActive(e) {
-      console.log(e.propertyName);
+      // console.log(e.propertyName);
       if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active');
       }
