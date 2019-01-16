@@ -3,6 +3,7 @@
 [了解 Fetch API](https://aotu.io/notes/2017/04/10/fetch-API/)
 [AJAX 與 Fetch API](https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/ajax_fetch.html)
 [HTTP 教學](https://notfalse.net/http-series)
+[XMLHttpRequest — JavaScript 發送 HTTP 請求 (I)](https://notfalse.net/29/xmlhttprequest)
 [操作符和 Ajax](https://rxjs-cn.github.io/RxJS-Ultimate-CN/content/operators-and-ajax.html)
 
 ### JSON 格式轉換
