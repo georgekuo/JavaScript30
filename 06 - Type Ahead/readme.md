@@ -8,6 +8,8 @@
 [XMLHttpRequest — JavaScript 發送 HTTP 請求 (I)](https://notfalse.net/29/xmlhttprequest)
 [操作符和 Ajax](https://rxjs-cn.github.io/RxJS-Ultimate-CN/content/operators-and-ajax.html)
 
+[正規表達式](https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Regular_Expressions)
+
 ### JSON 格式轉換
 * 將物件改為JSON格式，使用內建函式`JSON.stringify()`
 * 將JSON格式轉成物件，使用內建函式`JSON.parse()`
