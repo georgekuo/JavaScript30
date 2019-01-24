@@ -32,7 +32,18 @@ function findMatches(wordToMatch, cities){
 
 function displayMatches(){
   const matchArray = findMatches(this.value, cities)
-  console.log(matchArray)
+  const html = matchArray.map(place => {
+    const regex = new RegExp(this.value, 'gi');
+    const cityname = place.city.replace(regex, `<span class="h1">${this.value}</span>`)
+    const statename = place.state.replace(regex, `<span class="h1">${this.value}</span>`)
+    return `
+      <li>
+        <span class='name'>${place.city}, ${place.state}</span>
+        <span class='population'>${place.population}</span>
+      </li>
+    `;
+  }).join(''); // join() 將元素連接轉成字串
+  suggestions.innerHTML = html;
 }
 
 const searchInput = document.querySelector('.search');
