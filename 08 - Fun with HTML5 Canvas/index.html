@@ -15,7 +15,7 @@
   ctx.strokeStyle = '#BADA55';
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
-  ctx.lineWidth = 20;
+  ctx.lineWidth = 0;
 
   let isDrawing = false;
   let lastX = 0;
@@ -26,6 +26,7 @@
     if (!isDrawing) return;
     console.log(e);
     ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+    ctx.lineWidth = hue;
     ctx.beginPath(); // start  
     ctx.moveTo(lastX, lastY); // end
     ctx.lineTo(e.offsetX, e.offsetY);
