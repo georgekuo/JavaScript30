@@ -100,6 +100,10 @@
 
 <script>
   const checkboxes = document.querySelectorAll(".inbox input[type='checkbox']");
+  function handCheckout(e){
+    console.log(e)
+  }
+  checkboxes.forEach(checkbox => checkbox.addEventListener('click', handCheckout))
 </script>
 </body>
 </html>
