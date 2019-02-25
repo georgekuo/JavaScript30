@@ -102,6 +102,9 @@
   const checkboxes = document.querySelectorAll(".inbox input[type='checkbox']");
   function handCheckout(e){
     // console.log(e);
+    if(e.shiftKey && this.checked){
+      
+    }
     lastChecked = this;
   }
   checkboxes.forEach(checkbox => checkbox.addEventListener('click', handCheckout));
