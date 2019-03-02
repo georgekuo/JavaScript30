@@ -99,14 +99,12 @@
   </div>
 
 <script>
-  const checkboxes = document.querySelectorAll(".inbox input[type='checkbox']");
+  const checkBoxes = document.querySelectorAll(".inbox input[type='checkbox']");
   let lastChecked;
   function handCheckout(e) {
-    // console.log(e);
     let inBetween = false;
     if (e.shiftKey && this.checked) {
-      checkboxes.forEach(checkbox => {
-        // console.log(checkbox);
+      checkBoxes.forEach(checkbox => {
         if(checkbox === this || checkbox === lastChecked){
           inBetween = !inBetween;
         }
@@ -117,7 +115,7 @@
     }
     lastChecked = this;
   }
-  checkboxes.forEach(checkbox => checkbox.addEventListener('click', handCheckout));
+  checkBoxes.forEach(checkbox => checkbox.addEventListener('click', handCheckout));
 </script>
 </body>
 </html>
