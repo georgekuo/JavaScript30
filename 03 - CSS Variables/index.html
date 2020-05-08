@@ -58,7 +58,6 @@
 
     function handleUpdate() {
       // console.log(this.value) //input 裡的 min, max value
-      // console.log(this.dataset)
       const suffix = this.dataset.sizing || '';
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
     }
